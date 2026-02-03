@@ -17,7 +17,6 @@ soundfile==0.13.1
 # torch is provided by base image
 # torch==2.8.0
 # torchaudio matching base image
-torchvision
 transformers==4.50.0
 py3langid==0.3.0
 hangul-romanize==0.1.0
