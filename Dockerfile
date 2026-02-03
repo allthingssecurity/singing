@@ -1,5 +1,8 @@
 # Root-level Dockerfile for Runpod Serverless (Load Balancing)
 FROM pytorch/pytorch:2.1.0-cuda11.8-cudnn8-runtime
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Etc/UTC
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 WORKDIR /app
 RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg git && rm -rf /var/lib/apt/lists/*
 # Install Python deps (torch/torchaudio provided by base image)

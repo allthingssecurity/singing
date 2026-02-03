@@ -1,5 +1,8 @@
 # Runpod Load Balancing worker: FastAPI serving ACE-Step backend
 FROM pytorch/pytorch:2.1.0-cuda11.8-cudnn8-runtime
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Etc/UTC
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 WORKDIR /app
 # System deps
 RUN apt-get update && apt-get install -y ffmpeg git && rm -rf /var/lib/apt/lists/*
