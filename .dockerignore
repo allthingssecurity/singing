@@ -1,0 +1,6 @@
+**/__pycache__
+**/*.pyc
+server/studio_frontend
+server/outputs
+server/checkpoints
+server/.venv
