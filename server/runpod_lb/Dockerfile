@@ -5,7 +5,6 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y ffmpeg git && rm -rf /var/lib/apt/lists/*
 # Python deps (avoid pinning torch here; base image already has GPU torch)
 COPY requirements.runpod.txt /app/requirements.txt
-RUN pip install --no-cache-dir -U pip wheel setuptools && \
 RUN pip install -U --no-cache-dir pip wheel setuptools && \
     pip install --no-cache-dir -r /app/requirements.txt && \
     pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cu118 torchvision==0.16.0 torchaudio==2.1.0 && \
