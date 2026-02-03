@@ -1,0 +1,30 @@
+fastapi==0.115.5
+uvicorn[standard]==0.32.0
+pydantic==2.9.2
+starlette==0.41.2
+aiofiles==24.1.0
+runpod==1.6.2
+# from ACE-Step space
+datasets==3.4.1
+diffusers==0.32.2
+librosa==0.11.0
+loguru==0.7.3
+matplotlib==3.10.1
+numpy
+pypinyin==0.53.0
+pytorch_lightning==2.5.1
+soundfile==0.13.1
+# torch is provided by base image
+# torch==2.8.0
+# torchaudio matching base image
+torchvision
+transformers==4.50.0
+py3langid==0.3.0
+hangul-romanize==0.1.0
+num2words==0.5.14
+spacy==3.8.4
+accelerate==1.6.0
+cutlet
+fugashi[unidic-lite]
+peft
+tensorboard
